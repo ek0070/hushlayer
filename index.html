@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<title>Hushlayer — one tap, and your wallet goes quiet.</title>
+	<meta name="description" content="Hushlayer is a privacy layer for crypto: confidential transfers, swaps and bridging from the wallet you already use." />
+	<meta property="og:title" content="Hushlayer — one tap, and your wallet goes quiet." />
+	<meta property="og:description" content="A privacy layer for crypto: confidential transfers, swaps and bridging from the wallet you already use." />
+	<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<!-- Loader -->
+	<div class="loader" id="loader" aria-hidden="true">
+		<span class="mark mark--lg"></span>
+		<span class="wordmark">hushlayer</span>
+	</div>
+
+	<!-- Header -->
+	<header class="header" id="header" data-theme="light">
+		<div class="header__pill">
+			<a class="header__brand" href="#top" aria-label="Hushlayer home">
+				<span class="mark"></span>
+				<span class="wordmark">hushlayer</span>
+			</a>
+			<button class="header__toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+				<span></span><span></span>
+			</button>
+		</div>
+		<nav class="menu" id="menu" hidden>
+			<div class="menu__row menu__row--status">
+				<span class="dot" data-status-dot></span>
+				<p data-status-text>Beta closed. Launching soon</p>
+			</div>
+			<a class="menu__row" data-link="docs" target="_blank" rel="noopener noreferrer">
+				<svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 13h7M9 17h7" /></svg><p>Docs</p>
+			</a>
+			<a class="menu__row" data-link="x" target="_blank" rel="noopener noreferrer">
+				<svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20" /></svg><p>Meet the community</p>
+			</a>
+			<a class="menu__row" data-link="telegram" target="_blank" rel="noopener noreferrer">
+				<svg viewBox="0 0 24 24"><path d="M21 4L3 11l6 2 2 6 3-4 4 3z" /></svg><p>Join the Telegram</p>
+			</a>
+			<a class="menu__row" data-link="articles" target="_blank" rel="noopener noreferrer">
+				<svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h8M8 17h4" /></svg><p>Articles</p>
+			</a>
+			<a class="menu__row" data-link="email">
+				<svg viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 7l9 6 9-6" /></svg><p>Business inquiries</p>
+			</a>
+			<a class="menu__row" data-link="compliance" target="_blank" rel="noopener noreferrer">
+				<svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.500-1-8-4-8-9V6zM9 12l2 2 4-4" /></svg><p>Compliance</p>
+			</a>
+		</nav>
+	</header>
+
+	<main id="top">
+		<!-- Hero -->
+		<section class="hero" data-section="hero" data-theme="light">
+			<canvas class="hero__crowd" id="crowd" role="img" aria-label="A crowd that parts around your cursor"></canvas>
+			<div class="hero__copy">
+				<h1>One tap.<br />Gone quiet.</h1>
+				<p class="hero__sub">Zero-knowledge privacy for any<br />wallet, chain or token</p>
+				<div class="timer" id="timer">
+					<div class="timer__head">
+						<span class="dot" data-status-dot></span>
+						<span id="timerLabel">Launching soon</span>
+					</div>
+					<div class="timer__digits" id="timerDigits" hidden></div>
+					<p class="timer__local" id="timerLocal" hidden></p>
+					<button class="timer__address" id="addressChip" hidden>
+						<span id="addressText"></span>
+						<svg viewBox="0 0 24 24"><path d="M9 9h11v11H9zM5 15V4h11" /></svg>
+					</button>
+				</div>
+			</div>
+			<p class="hero__hint">
+				<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" /><circle cx="12" cy="12" r="9" /></svg>
+				<span data-hint>Move through the crowd</span>
+			</p>
+		</section>
+
+		<!-- Keyhole -->
+		<section class="keyhole" id="keyhole" data-section="keyhole" data-theme="dark">
+			<div class="keyhole__stage">
+				<div class="keyhole__content">
+					<div class="keyhole__lead" data-reveal>
+						<h2>Hushlayer closes the oldest gap in web3: everything you do is public.</h2>
+						<p>Think of it as a private tunnel for your on-chain activity.</p>
+					</div>
+					<div class="keyhole__steps">
+						<div data-reveal>
+							<h3>Add the app or the extension,</h3>
+							<p>tap once, and each transaction leaves shielded.</p>
+						</div>
+						<div data-reveal>
+							<h3>Same wallet, same habits,</h3>
+							<p>nothing to relearn. Only now nobody is reading along.</p>
+						</div>
+					</div>
+				</div>
+				<svg class="keyhole__mask" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+					<defs>
+						<mask id="khMask">
+							<rect x="-500" y="-500" width="1100" height="1100" fill="#fff" />
+							<g id="khShape">
+								<circle cx="50" cy="44" r="6" fill="#000" />
+								<path d="M47 47 L53 47 L55.500 60 L44.500 60 Z" fill="#000" />
+							</g>
+						</mask>
+					</defs>
+					<rect class="keyhole__door" x="-500" y="-500" width="1100" height="1100" mask="url(#khMask)" />
+				</svg>
+				<p class="keyhole__hint" id="khHint">Scroll to look inside</p>
+			</div>
+		</section>
+
+		<!-- Phone -->
+		<section class="phone" id="demo" data-section="phone" data-theme="light" aria-label="Interactive phone demonstration">
+			<div class="phone__copy">
+				<h2>Your wallet,<br />your business</h2>
+				<p>Private in two taps. Try it.</p>
+				<ol class="phone__steps">
+					<li data-step="1">Connect the wallet you already have</li>
+					<li data-step="2">Switch the shield on</li>
+				</ol>
+			</div>
+			<div class="device" id="device" data-state="0">
+				<div class="device__notch"></div>
+				<div class="device__screen">
+					<div class="device__top">
+						<span class="device__label">What the chain sees</span>
+						<span class="badge" id="deviceBadge">Public</span>
+					</div>
+					<p class="device__wallet" id="deviceWallet">No wallet connected</p>
+					<p class="device__balance" id="deviceBalance">—</p>
+					<ul class="device__txs" id="deviceTxs"></ul>
+					<button class="device__cta" id="deviceCta">1 · Connect wallet</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Carousel -->
+		<section class="cards" id="why" data-section="carousel" data-theme="light">
+			<div class="cards__head">
+				<h2>Privacy this easy<br /><span class="strike">didn’t exist.</span> <em>&gt;&gt;&gt; Now it does.</em></h2>
+				<div class="cards__nav">
+					<button id="cardsPrev" aria-label="Previous card">←</button>
+					<button id="cardsNext" aria-label="Next card">→</button>
+				</div>
+			</div>
+			<div class="cards__track" id="cardsTrack">
+				<article class="card">
+					<svg viewBox="0 0 120 120"><rect x="18" y="34" width="84" height="56" rx="8" /><path d="M18 50h84" /><circle cx="84" cy="68" r="6" /></svg>
+					<h3>Keep the wallet you have.</h3>
+					<p>No fresh seed phrase, no second account to babysit.</p>
+				</article>
+				<article class="card">
+					<svg viewBox="0 0 120 120"><path d="M60 16l36 14v28c0 24-16 38-36 46-20-8-36-22-36-46V30z" /><path d="M46 60l10 10 20-20" /></svg>
+					<h3>One tap covers all of it.</h3>
+					<p>Transfers and tokens alike, native ETH and NFTs included.</p>
+				</article>
+				<article class="card">
+					<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="38" /><path d="M60 36v24l16 10" /><path d="M14 60h8M98 60h8" /></svg>
+					<h3>It stays out of your way.</h3>
+					<p>Runs in the background. Nothing to configure, nothing to remember.</p>
+				</article>
+				<article class="card">
+					<svg viewBox="0 0 120 120"><circle cx="44" cy="60" r="18" /><path d="M62 60h44M92 60v14M80 60v10" /></svg>
+					<h3>Your keys never leave you.</h3>
+					<p>Funds stay under <strong>your control</strong> from start to finish.</p>
+				</article>
+				<article class="card">
+					<svg viewBox="0 0 120 120"><path d="M66 14L30 66h26l-4 40 38-54H64z" /></svg>
+					<h3>Cheap and quick.</h3>
+					<p>Low fees, fast confirmations, and built to span more networks.</p>
+				</article>
+			</div>
+			<div class="cards__dots" id="cardsDots"></div>
+		</section>
+
+		<!-- Roadmap / city -->
+		<section class="city" id="roadmap" data-section="city" data-theme="light">
+			<h2>One layer. Every use.</h2>
+			<ol class="city__list">
+				<li><strong>Every network.</strong> Reach beyond EVM chains, to the likes of Solana and Bitcoin, through proxying.</li>
+				<li><strong>Programmable privacy.</strong> Expressive spending scripts and zero-knowledge account abstraction.</li>
+				<li><strong>Privacy on autopilot.</strong> Swaps, bridges and routing chosen for you to keep the trail cold.</li>
+				<li><strong>Privacy as the default.</strong> For everyone who uses web3, not only the people who study it.</li>
+			</ol>
+			<div class="city__skyline" id="skyline" aria-hidden="true"></div>
+		</section>
+
+		<!-- Eyes -->
+		<section class="eyes" id="manifesto" data-section="eyes" data-theme="dark">
+			<div class="eyes__wall" id="eyesWall" aria-hidden="true"></div>
+			<div class="eyes__copy">
+				<h2>You are not free while someone is taking notes.</h2>
+				<p>Everybody should be able to act, speak and pay without an audience. Privacy is not secrecy. It is deciding for yourself who gets to know. In a free society that decision belongs to the person, not the observer.</p>
+				<div class="eyes__cta">
+					<a class="btn btn--solid" data-link="x" target="_blank" rel="noopener noreferrer">Join the community</a>
+					<a class="btn btn--ghost" data-link="email">Business inquiries</a>
+				</div>
+			</div>
+			<footer class="footer">
+				<span class="wordmark">hushlayer</span>
+				<span>© <span data-year></span> Hushlayer</span>
+			</footer>
+		</section>
+	</main>
+
+	<div class="toast" id="toast" role="status" aria-live="polite"></div>
+	<script src="site.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>

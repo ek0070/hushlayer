@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<title>Compliance — Hushlayer</title>
+	<meta name="description" content="Hushlayer compliance information and on-chain addresses." />
+	<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="stylesheet" href="pages.css" />
+</head>
+<body class="page">
+	<!-- Header -->
+	<header class="header" id="header" data-theme="light">
+		<div class="header__pill">
+			<a class="header__brand" href="index.html" aria-label="Hushlayer home">
+				<span class="mark"></span>
+				<span class="wordmark">hushlayer</span>
+			</a>
+			<button class="header__toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+				<span></span><span></span>
+			</button>
+		</div>
+		<nav class="menu" id="menu" hidden>
+			<div class="menu__row menu__row--status">
+				<span class="dot" data-status-dot></span>
+				<p data-status-text>Beta closed. Launching soon</p>
+			</div>
+			<a class="menu__row" data-link="docs" target="_blank" rel="noopener noreferrer">
+				<svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 13h7M9 17h7" /></svg><p>Docs</p>
+			</a>
+			<a class="menu__row" data-link="x" target="_blank" rel="noopener noreferrer">
+				<svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20" /></svg><p>Meet the community</p>
+			</a>
+			<a class="menu__row" data-link="telegram" target="_blank" rel="noopener noreferrer">
+				<svg viewBox="0 0 24 24"><path d="M21 4L3 11l6 2 2 6 3-4 4 3z" /></svg><p>Join the Telegram</p>
+			</a>
+			<a class="menu__row" data-link="articles" target="_blank" rel="noopener noreferrer">
+				<svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h8M8 17h4" /></svg><p>Articles</p>
+			</a>
+			<a class="menu__row" data-link="email">
+				<svg viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 7l9 6 9-6" /></svg><p>Business inquiries</p>
+			</a>
+			<a class="menu__row" data-link="compliance" target="_blank" rel="noopener noreferrer">
+				<svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.500-1-8-4-8-9V6zM9 12l2 2 4-4" /></svg><p>Compliance</p>
+			</a>
+		</nav>
+	</header>
+
+	<main class="comp">
+		<p class="crumb" id="compCrumb"></p>
+		<h1>Compliance</h1>
+		<p class="comp__lead" id="compLead"></p>
+		<nav class="comp__toc" id="compToc"></nav>
+		<div class="comp__csv">
+			<p>Labelling these addresses? Copy every address on this page in one go.</p>
+			<button class="chip" id="compCsv">Copy all as CSV</button>
+		</div>
+		<div id="compSections"></div>
+		<footer class="page__foot">
+			<span>Hushlayer</span>
+			<a href="index.html">Home</a>
+			<a href="docs.html">Docs</a>
+			<a href="compliance.html">Compliance</a>
+			<a data-link="email">Contact</a>
+		</footer>
+	</main>
+
+	<div class="toast" id="toast" role="status" aria-live="polite"></div>
+	<script src="site.js"></script>
+	<script src="compliance-data.js"></script>
+	<script src="pages.js"></script>
+</body>
+</html>
